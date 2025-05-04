@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | FocusDev</title>
+    <meta name="description" content="Focus Dev - Soluções que conectam" />
+    <link rel="icon" href="./assets/icon_focusdev.svg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="login">
+      <section class="login__container">
+        <header class="login__container__logo">
+          <img src="./assets/logo_light_focusdev.svg" alt="Logo Focus Dev" />
+          <h1>Login</h1>
+          <p>
+            Faça login ou registre-se para transformar suas ideias em soluções
+            reais
+          </p>
+        </header>
+
+        <form class="login__container__form" action="/login" method="POST">
+          <div class="login__container__form__email-wrapper">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Digite o seu e-mail"
+              required
+            />
+          </div>
+          <div class="login__container__form__password-wrapper">
+            <div class="login__container__form__password-wrapper__label">
+              <label for="password">Senha</label>
+              <a href="/recuperar-senha">Esqueceu a senha?</a>
+            </div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Digite a sua senha"
+              required
+            />
+          </div>
+
+          <button type="submit">Entrar</button>
+        </form>
+
+        <footer class="login__container__register">
+          <p>Ainda não tem conta? <a href="/registrar">Registre-se</a></p>
+        </footer>
+      </section>
+
+      <section class="login__illustration">
+        <img
+          src="./assets/login_illustration.svg"
+          alt="Ilustração de pessoas colaborando em projeto digital"
+        />
+        <p>
+          Vamos juntos transformar ideias em experiências digitais incríveis
+        </p>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
