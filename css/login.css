@@ -1,29 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-:root {
-  --alice-blue: #f0f9ff;
-  --deep-sky-blue: #00bcff;
-  --celestial-blue: #2a9df4;
-  --azul: #0069a8;
-  --prussian-blue: #052f4a;
-
-  --black: #222222;
-  --gray: #94a3b8;
-
-  --green: #1bc63d;
-  --red: #e14d45;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Lexend", sans-serif;
-  background: var(--alice-blue);
-  color: var(--prussian-blue);
-}
+@import url("./css/style.css");
 
 .login {
   display: flex;
@@ -128,11 +103,10 @@ body {
   transition: color 0.3s ease;
 }
 
-.login__container__form__password-wrapper__input{
+.login__container__form__password-wrapper__input {
   position: relative;
   display: flex;
   align-items: center;
-
 }
 
 .login__container__form__password-wrapper__input input {
@@ -140,7 +114,7 @@ body {
   padding-right: 2.5rem;
 }
 
-.toggle-password{
+.toggle-password {
   position: absolute;
   right: 0.75rem;
   top: 50%;
@@ -149,10 +123,9 @@ body {
   border: none;
   cursor: pointer;
   padding: 0;
-
 }
 
-.toggle-password img{
+.toggle-password img {
   width: 20px;
   height: 20px;
 }
