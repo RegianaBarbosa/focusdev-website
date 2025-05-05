@@ -78,6 +78,16 @@ body {
   letter-spacing: 0.5px;
 }
 
+.input-error {
+  border: 1px solid var(--red) !important;
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
 .login__container__form input:focus,
 .login__container__form input:focus-visible {
   outline: none;
