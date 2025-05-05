@@ -33,6 +33,13 @@ function clearErrors(emailInput, passwordInput) {
 }
 
 function showErrors(emailWrong, passwordWrong, emailInput, passwordInput) {
+  const emailWrapper = emailInput.closest(
+    ".login__container__form__email-wrapper"
+  );
+  const passwordWrapper = passwordInput.closest(
+    ".login__container__form__password-wrapper"
+  );
+
   if (emailWrong || passwordWrong) {
     //Add error class to inputs
     if (emailWrong) emailInput.classList.add("input-error");
@@ -44,13 +51,13 @@ function showErrors(emailWrong, passwordWrong, emailInput, passwordInput) {
 
     if (emailWrong && passwordWrong) {
       errorMessage.textContent = "E-mail e senha inválidos";
-      passwordInput.parentNode.appendChild(errorMessage);
+      passwordWrapper.appendChild(errorMessage);
     } else if (emailWrong) {
       errorMessage.textContent = "Seu e-mail está incorreto";
-      emailInput.parentNode.appendChild(errorMessage);
+      emailWrapper.appendChild(errorMessage);
     } else if (passwordWrong) {
       errorMessage.textContent = "Sua senha está incorreta";
-      passwordInput.parentNode.appendChild(errorMessage);
+      passwordWrapper.appendChild(errorMessage);
     }
   }
 }
