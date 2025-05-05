@@ -94,6 +94,10 @@ body {
   border: 1.6px solid var(--azul);
 }
 
+.login__container__form input:not(:placeholder-shown) {
+  color: var(--black);
+}
+
 .login__container__form__email-wrapper {
   display: flex;
   flex-direction: column;
