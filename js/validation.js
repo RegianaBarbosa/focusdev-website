@@ -22,7 +22,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     return;
   }
 
-  window.location.href = "/inicio";
+  window.location.href = "/home.html";
 });
 
 // Clear previous error messages

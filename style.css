@@ -128,6 +128,35 @@ body {
   transition: color 0.3s ease;
 }
 
+.login__container__form__password-wrapper__input{
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.login__container__form__password-wrapper__input input {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.toggle-password{
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+}
+
+.toggle-password img{
+  width: 20px;
+  height: 20px;
+}
+
 button[type="submit"] {
   background: var(--azul);
   color: var(--alice-blue);

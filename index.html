@@ -36,13 +36,23 @@
               <label for="password">Senha</label>
               <a href="/recuperar-senha">Esqueceu a senha?</a>
             </div>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Digite a sua senha"
-              required
-            />
+            <div class="login__container__form__password-wrapper__input">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Digite a sua senha"
+                required
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                id="togglePassword"
+                aria-label="Mostrar senha"
+              >
+                <img src="./assets/eye-off.svg" id="eyeIcon" />
+              </button>
+            </div>
           </div>
 
           <button type="submit">Entrar</button>
@@ -63,6 +73,8 @@
         </p>
       </section>
     </main>
+
+    <script src="js/validation.js"></script>
+    <script src="js/togglePassword.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
