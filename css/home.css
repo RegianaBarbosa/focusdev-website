@@ -1,5 +1,7 @@
 @import url("./css/style.css");
 
+/* NAVBAR */
+
 .navbar {
   display: flex;
   height: 97px;
@@ -69,6 +71,8 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* BANNER INICIAL */
+
 .hero {
   background: url("/assets/hero_background.png") center/cover no-repeat;
   min-height: 632px;
@@ -114,4 +118,55 @@
   background: var(--celestial-blue);
   color: var(--alice-blue);
   transition: all 0.3s ease-in-out;
+}
+
+/* QUEM SOMOS */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+  gap: 2rem;
+  padding: 2.5rem 4rem;
+  min-height: 730px;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 50rem;
+  flex: 1 1 400px;
+}
+
+.about__container h2 {
+  color: var(--azul);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.about__container p,
+.about__container li {
+  color: var(--prussian-blue);
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.about__container ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.about__illustration {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+.about__illustration img {
+  max-width: 80%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
