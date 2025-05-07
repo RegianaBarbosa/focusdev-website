@@ -1,81 +1,73 @@
 @import url("./css/style.css");
 
-/* NAVBAR */
+/* MOBILE-FIRST */
 
 .navbar {
   display: flex;
-  height: 97px;
-  padding: 0px 32px;
-  justify-content: space-between;
-  align-items: center;
-  align-self: stretch;
-
-  box-shadow: 0px 4px 18.6px -2px var(--shadow);
+  alighn-items: center;
+  height: 64px;
+  padding: 16px 32px;
+  margin: auto;
+  gap: 52.233px;
+  flex-shrink: 0;
 }
 
-.navbar__logo {
-  height: 40px;
+.navbar img {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar__menu {
-  display: flex;
-  gap: 1.5rem;
+  display: none;
 }
 
-.navbar__menu a {
-  text-decoration: none;
-  color: var(--prussian-blue);
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.navbar__menu a:hover {
-  background: var(--celestial-blue);
-  color: var(--alice-blue);
-}
-
-.navbar__menu a:active {
-  background: var(--prussian-blue);
-  color: var(--alice-blue);
-}
-
-.navbar__logout {
-  display: flex;
-  height: 46px;
-  padding: 8px 20px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-
-  background: var(--red);
-  color: var(--alice-blue);
-  text-weight: 600;
+.navbar__toggle {
+  display: block;
+  background: none;
   border: none;
-  border-radius: 4px;
-
-  text-align: center;
-  font-family: Lexend;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-
   cursor: pointer;
 }
 
-.navbar__logout:hover {
-  background: var(--cornell-red);
+.sidebar {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 
-  transition: all 0.3s ease-in-out;
+  background: var(--azul);
+  color: var(--alice-blue);
 }
 
-/* BANNER INICIAL */
+.sidebar.open {
+  display: flex;
+}
 
+.sidebar__menu a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.navbar__logout {
+  display: none;
+}
+
+/* BANNER */
 .hero {
   background: url("/assets/hero_background.png") center/cover no-repeat;
-  min-height: 632px;
+  min-height: 300px;
   position: relative;
   color: white;
   display: flex;
@@ -89,13 +81,14 @@
   width: 778px;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
+  gap: 2rem;
+  padding: 0 2rem;
 }
 
 .hero__container h1 {
   color: var(--alice-blue);
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
@@ -103,7 +96,7 @@
 
 .hero__button {
   display: inline-block;
-  padding: 1rem 8rem;
+  padding: 1rem 6rem;
   justify-content: center;
   align-items: center;
 
@@ -120,53 +113,192 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* QUEM SOMOS */
-.about {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
+/* DESKTOP */
+@media (min-width: 768px) {
+  /* NAVBAR */
 
-  gap: 2rem;
-  padding: 2.5rem 4rem;
-  min-height: 730px;
-}
+  .navbar {
+    background: var(--alice-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
-.about__container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 50rem;
-  flex: 1 1 400px;
-}
+    display: flex;
+    height: 97px;
+    padding: 0px 32px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
 
-.about__container h2 {
-  color: var(--azul);
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
+    box-shadow: 0px 4px 18.6px -2px var(--shadow);
+  }
 
-.about__container p,
-.about__container li {
-  color: var(--prussian-blue);
-  font-size: 1.25rem;
-  line-height: 1.4;
-}
+  .navbar__logo {
+    height: 40px;
+  }
+  .navbar__toggle {
+    display: none;
+  }
+  .navbar__menu {
+    display: flex;
+    gap: 1.5rem;
+  }
 
-.about__container ul {
-  padding-left: 1.5rem;
-  list-style-type: disc;
-}
+  .navbar__menu a {
+    text-decoration: none;
+    color: var(--prussian-blue);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
 
-.about__illustration {
-  flex: 1 1 300px;
-  display: flex;
-  justify-content: center;
-}
-.about__illustration img {
-  max-width: 80%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
+  .navbar__menu a:hover {
+    background: var(--azul);
+    color: var(--alice-blue);
+  }
+
+  .navbar__menu a.active {
+    background: var(--azul);
+    color: var(--alice-blue);
+  }
+
+  .navbar__logout {
+    display: flex;
+    height: 46px;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    background: var(--red);
+    color: var(--alice-blue);
+    text-weight: 600;
+    border: none;
+    border-radius: 4px;
+
+    text-align: center;
+    font-family: Lexend;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    cursor: pointer;
+  }
+
+  .navbar__logout img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .navbar__logout:hover {
+    background: var(--cornell-red);
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  main {
+    padding-top: 97px;
+  }
+
+  /* BANNER INICIAL */
+
+  .hero {
+    background: url("/assets/hero_background.png") center/cover no-repeat;
+    min-height: 632px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero__container {
+    display: flex;
+    width: 778px;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .hero__container h1 {
+    color: var(--alice-blue);
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  .hero__button {
+    display: inline-block;
+    padding: 1rem 8rem;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    background: var(--azul);
+    color: var(--alice-blue);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .hero__button:hover {
+    background: var(--celestial-blue);
+    color: var(--alice-blue);
+    transition: all 0.3s ease-in-out;
+  }
+  /* QUEM SOMOS */
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+
+    gap: 2rem;
+    padding: 2.5rem 4rem;
+    min-height: 632px;
+  }
+
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50rem;
+    flex: 1 1 400px;
+  }
+
+  .about__container h2 {
+    color: var(--azul);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .about__container p,
+  .about__container li {
+    color: var(--prussian-blue);
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .about__container ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+  .about__illustration {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+  }
+  .about__illustration img {
+    max-width: 80%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
 }

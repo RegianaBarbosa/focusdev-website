@@ -1,5 +1,7 @@
 @import url("./css/style.css");
 
+/* MOBILE-FIRST */
+
 .login {
   display: flex;
   flex-direction: column;
@@ -172,7 +174,7 @@ button[type="submit"]:hover {
   display: none;
 }
 
-/* Desktop */
+/* DESKTOP */
 @media (min-width: 768px) {
   .login {
     flex-direction: row;
