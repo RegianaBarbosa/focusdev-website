@@ -4,7 +4,7 @@
 
 .navbar {
   display: flex;
-  alighn-items: center;
+  align-items: center;
   height: 64px;
   padding: 16px 32px;
   margin: auto;
@@ -122,21 +122,16 @@
 
   gap: 2rem;
   padding: 2.5rem 1rem;
-  min-height: 632px;
 }
 
 .about__container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  max-width: 50rem;
   flex: 1 1 400px;
 }
 
 .about__container h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--azul);
   font-size: 2rem;
   font-weight: 600;
@@ -171,6 +166,78 @@
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: contain;
+}
+
+/* SERVIÇOS */
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+
+  gap: 2rem;
+  padding: 2.5rem 1rem;
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 50rem;
+  flex: 1 1 400px;
+}
+
+.services__container h2 {
+  color: var(--azul);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+
+  padding-top: 0;
+}
+
+.services__container__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__container__cards__item {
+  display: flex;
+  width: 16rem;
+  height: 20rem;
+  padding: 30px 17px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.services__container__cards__item h3 {
+  margin-top: 1rem;
+}
+
+.services__container__cards__item p {
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.blue {
+  background: var(--azul);
+  color: var(--alice-blue);
+  border-radius: 16px;
+  box-shadow: 0px 2px 13.4px 1px var(--shadow);
+}
+
+.white {
+  background: var(--alice-blue);
+  color: var(--azul);
+  border-radius: 16px;
+  box-shadow: 0px 2px 13.4px 1px var(--shadow);
 }
 
 /* DESKTOP */
@@ -316,6 +383,7 @@
   /* QUEM SOMOS */
   .about {
     padding: 2.5rem 4rem;
+    min-height: 540px;
   }
 
   .about__container h2 {
@@ -329,5 +397,16 @@
     align-items: left;
     justify-content: left;
     text-align: left;
+  }
+
+  /* SERVIÇOS */
+  .services {
+    padding: 2.5rem 4rem;
+    min-height: 540px;
+    gap: 4rem;
+  }
+
+  .services__container__cards {
+    flex-direction: row;
   }
 }

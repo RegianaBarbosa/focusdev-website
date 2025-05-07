@@ -13,14 +13,14 @@ document.querySelectorAll(".navbar__menu a").forEach((link) => {
   });
 });
 
-const sections = document.querySelectorAll("main section[id]");
+const sections = document.querySelectorAll("section[id]");
 const menuLinks = document.querySelectorAll(".navbar__menu a");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset;
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 98;
+    const sectionTop = section.offsetTop - window.innerHeight / 2;
     const sectionHeight = section.offsetHeight;
     const sectionId = section.getAttribute("id");
 
