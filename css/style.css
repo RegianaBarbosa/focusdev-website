@@ -13,7 +13,7 @@
 
   --green: #1bc63d;
   --red: #e14d45;
-  --cornell-red : #c11f1f;
+  --cornell-red: #c11f1f;
 }
 
 * {
@@ -22,8 +22,12 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lexend", sans-serif;
   background: var(--alice-blue);
   color: var(--prussian-blue);
-}s
+}

@@ -11,25 +11,50 @@
   </head>
   <body>
     <header class="navbar">
-      <img
-        class="navbar__logo"
-        src="assets/logo_light_focusdev.svg"
-        alt="Logo Focus Dev"
-      />
+      <!-- Menu icon (mobile) -->
+      <button class="navbar__toggle" id="toggleMenu" aria-label="Abrir menu">
+        <img src="assets/menu-icon.svg" alt="Menu de navegação" />
+      </button>
+
+      <img src="assets/logo_light_focusdev.svg" alt="Logo Focus Dev" />
+
+      <!-- Menu (desktop) -->
       <nav class="navbar__menu">
-        <a href="#home" class="active">Início</a>
-        <a href="#">Quem somos</a>
-        <a href="#">Serviços</a>
-        <a href="#">Soluções</a>
-        <a href="#">Contato</a>
+        <a href="#hero" class="active">Início</a>
+        <a href="#about">Quem somos</a>
+        <a href="#services">Serviços</a>
+        <a href="#solutions">Soluções</a>
+        <a href="#contact">Contato</a>
       </nav>
+
       <button class="navbar__logout" id="logout">
-        Sair<img src="assets/logout.svg" alt="Botão de sair" />
+        Sair <img src="assets/logout.svg" alt="Botão de sair" />
       </button>
     </header>
+
+    <!-- Sidebar (mobile) -->
+    <aside class="sidebar" id="sidebar">
+      <nav class="sidebar__menu">
+        <a href="#hero"
+          ><img src="assets/home.svg" alt="" class="active" /> Início</a
+        >
+        <a href="#about"><img src="assets/about.svg" alt="" /> Quem somos</a>
+        <a href="#services"
+          ><img src="assets/services.svg" alt="" /> Serviços</a
+        >
+        <a href="#solutions"
+          ><img src="assets/solutions.svg" alt="" /> Soluções</a
+        >
+        <a href="#contact"><img src="assets/contact.svg" alt="" /> Contato</a>
+        <button class="sidebar__logout" id="logout">
+          <img src="assets/logout.svg" alt="" /> Sair
+        </button>
+      </nav>
+    </aside>
+
     <main>
       <!-- Início -->
-      <section class="hero" aria-label="Banner inicial">
+      <section id="hero" class="hero" aria-label="Banner inicial">
         <div class="hero__container">
           <h1>
             Acreditamos que a tecnologia é a ponte entre ideias e resultados
@@ -62,5 +87,9 @@
         </div>
       </section>
     </main>
+
+    <script src="js/toggleMenu.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/logout.js"></script>
   </body>
 </html>
