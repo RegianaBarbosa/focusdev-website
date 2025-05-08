@@ -53,5 +53,10 @@ Projeto de landing page com autenticação para a empresa fictícia **FocusDev**
 
 🔗 [Acessar no Figma](https://www.figma.com/design/MET0GKSodNS6aXt6BOsdGO/Projeto-Teste?node-id=72-1524&m=dev)
 
+## 🔑 Para acessar
+- **E-mail**: admin@focusdev.com
+- **Senha**: fOcusDev123
+
+
 ## 🧑‍💻 Autor
 [@RegianaCruz](https://github.com/RegianaBarbosa)
