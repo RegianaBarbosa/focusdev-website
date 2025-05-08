@@ -114,7 +114,7 @@ main {
 
 /* BANNER */
 .hero {
-  background: url("/assets/hero_background.png") center/cover no-repeat;
+  background: url("/assets/img/hero_background.png") center/cover no-repeat;
   min-height: 300px;
   position: relative;
   color: white;
@@ -541,7 +541,7 @@ main {
   /* BANNER INICIAL */
 
   .hero {
-    background: url("/assets/hero_background.png") center/cover no-repeat;
+    background: url("/assets/img/hero_background.png") center/cover no-repeat;
     min-height: 632px;
     position: relative;
     color: white;
