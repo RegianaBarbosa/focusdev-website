@@ -362,7 +362,7 @@
 }
 
 .contact__container__info h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .contact__container__info p {
@@ -628,10 +628,6 @@
     align-items: flex-start;
     justify-content: center;
     width: 347px;
-  }
-
-  .contact__container__info h3 {
-    font-size: 1.5rem;
   }
 
   .contact__container__info p {
