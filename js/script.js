@@ -13,11 +13,15 @@ document.querySelectorAll(".navbar__menu a").forEach((link) => {
   });
 });
 
-const sections = document.querySelectorAll("section[id]");
+const sections = document.querySelectorAll("section[id], footer[id]");
 const menuLinks = document.querySelectorAll(".navbar__menu a");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.body.offsetHeight;
+
+  let found = false;
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - window.innerHeight / 2;
@@ -25,6 +29,7 @@ window.addEventListener("scroll", () => {
     const sectionId = section.getAttribute("id");
 
     if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      found = true;
       menuLinks.forEach((link) => {
         link.classList.remove("active");
         if (link.getAttribute("href") === `#${sectionId}`) {
@@ -33,4 +38,13 @@ window.addEventListener("scroll", () => {
       });
     }
   });
+
+  if (!found && window.innerHeight + scrollY >= documentHeight - 10) {
+    menuLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#contact") {
+        link.classList.add("active");
+      }
+    });
+  }
 });
