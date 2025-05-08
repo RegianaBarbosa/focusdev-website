@@ -113,6 +113,66 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* QUEM SOMOS */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+
+  gap: 2rem;
+  padding: 2.5rem 1rem;
+  min-height: 540px;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 50rem;
+  flex: 1 1 400px;
+}
+
+.about__container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--azul);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.about__container p,
+.about__container li {
+  color: var(--prussian-blue);
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.about__container p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about__container ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+.about__illustration {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+.about__illustration img {
+  max-width: 80%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
 /* SERVIÇOS */
 .services {
   display: flex;
@@ -240,6 +300,11 @@
 .solutions__container__cards__item p {
   font-size: 1.05rem;
   line-height: 1.4;
+}
+
+.contact {
+  background: var(--azul);
+  color: var(--alice-blue);
 }
 
 /* DESKTOP */
@@ -381,54 +446,23 @@
     color: var(--alice-blue);
     transition: all 0.3s ease-in-out;
   }
+
   /* QUEM SOMOS */
   .about {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: center;
-
-    gap: 2rem;
     padding: 2.5rem 4rem;
-    min-height: 540px;
-  }
-
-  .about__container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 50rem;
-    flex: 1 1 400px;
   }
 
   .about__container h2 {
-    color: var(--azul);
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .about__container p,
-  .about__container li {
-    color: var(--prussian-blue);
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-
-  .about__container ul {
-    padding-left: 1.5rem;
-    list-style-type: disc;
-  }
-  .about__illustration {
-    flex: 1 1 300px;
     display: flex;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
   }
-  .about__illustration img {
-    max-width: 80%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
+
+  .about__container p {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
   }
 
   /* SERVIÇOS */
